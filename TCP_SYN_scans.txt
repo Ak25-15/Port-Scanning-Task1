@@ -1,0 +1,203 @@
+=== Basic SYN Scan ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 09:12 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.0054s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3580/tcp open  nati-svrloc
+8080/tcp open  http-proxy
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0039s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.0000020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 7.23 seconds
+=== Service Detection ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 09:12 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.0016s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3580/tcp open  http          National Instruments LabVIEW service locator httpd 1.0.0
+8080/tcp open  http          Embedthis HTTP lib httpd
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0011s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.52
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.0000020s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.9p2 Debian 1 (protocol 2.0)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (3 hosts up) scanned in 13.37 seconds
+=== OS Detection ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 09:12 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.0015s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3580/tcp open  nati-svrloc
+8080/tcp open  http-proxy
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge
+Running (JUST GUESSING): AT&T embedded (98%), QEMU (94%), Oracle Virtualbox (93%), Slirp (93%), GNU Hurd (88%)
+OS CPE: cpe:/a:qemu:qemu cpe:/a:oracle:vm_virtualbox cpe:/a:danny_gasparovski:slirp cpe:/o:gnu:hurd
+Aggressive OS guesses: AT&T BGW210 voice gateway (98%), QEMU user mode network gateway (94%), Oracle Virtualbox Slirp NAT bridge (93%), GNU Hurd 0.3 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0021s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge|printer
+Running (JUST GUESSING): AT&T embedded (96%), QEMU (95%), Oracle Virtualbox (94%), Slirp (94%), Samsung embedded (87%), Dell embedded (86%), Wind River VxWorks (86%)
+OS CPE: cpe:/a:qemu:qemu cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/h:samsung:clp-315w cpe:/h:dell:1815dn cpe:/o:windriver:vxworks
+Aggressive OS guesses: AT&T BGW210 voice gateway (96%), QEMU user mode network gateway (95%), Oracle Virtualbox Slirp NAT bridge (94%), Samsung CLP-315W printer (87%), Dell 1815dn printer (86%), VxWorks (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 10.0.2.15
+Host is up (0.000077s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+Device type: general purpose
+Running: Linux 2.6.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:5 cpe:/o:linux:linux_kernel:6
+OS details: Linux 2.6.32, Linux 5.0 - 6.2
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (3 hosts up) scanned in 12.19 seconds
+=== Specific Ports ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 09:12 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.00057s latency).
+
+PORT    STATE    SERVICE
+22/tcp  filtered ssh
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.00070s latency).
+
+PORT    STATE    SERVICE
+22/tcp  filtered ssh
+80/tcp  filtered http
+443/tcp filtered https
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.000045s latency).
+
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+80/tcp  closed http
+443/tcp closed https
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.39 seconds
+=== Aggressive Scan ===
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 09:12 EDT
+Nmap scan report for 10.0.2.2
+Host is up (0.0018s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+3580/tcp open  http          National Instruments LabVIEW service locator httpd 1.0.0
+|_http-title: Did not follow redirect to http://10.0.2.2:3582
+|_http-server-header: NI Service Locator/1.0.0 (SLServer)
+8080/tcp open  http          Embedthis HTTP lib httpd
+|_http-server-header: Embedthis-http
+|_http-title: Not Found
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge|printer
+Running (JUST GUESSING): AT&T embedded (98%), QEMU (94%), Oracle Virtualbox (94%), Slirp (94%), GNU Hurd (88%), Konica Minolta embedded (88%)
+OS CPE: cpe:/a:qemu:qemu cpe:/a:oracle:vm_virtualbox cpe:/a:danny_gasparovski:slirp cpe:/o:gnu:hurd cpe:/h:konicaminolta:7035
+Aggressive OS guesses: AT&T BGW210 voice gateway (98%), QEMU user mode network gateway (94%), Oracle Virtualbox Slirp NAT bridge (94%), GNU Hurd 0.3 (88%), Konica Minolta 7035 printer (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-06-23T13:13:13
+|_  start_date: N/A
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.79 ms 10.0.2.2
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0021s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|general purpose|bridge|printer
+Running (JUST GUESSING): AT&T embedded (96%), QEMU (95%), Oracle Virtualbox (95%), Slirp (95%), Samsung embedded (87%), Dell embedded (87%), Wind River VxWorks (87%), Xerox embedded (87%)
+OS CPE: cpe:/a:qemu:qemu cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/h:samsung:clp-315w cpe:/h:dell:1815dn cpe:/o:windriver:vxworks cpe:/h:xerox:workcentre_4150
+Aggressive OS guesses: AT&T BGW210 voice gateway (96%), QEMU user mode network gateway (95%), Oracle Virtualbox Slirp NAT bridge (95%), Samsung CLP-315W printer (87%), Dell 1815dn printer (87%), VxWorks (87%), Xerox WorkCentre 4150 printer (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   2.13 ms 10.0.2.3
+
+Nmap scan report for 10.0.2.15
+Host is up (0.000073s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.9p2 Debian 1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 ef:a0:a9:94:6a:d8:2e:af:59:5a:84:77:83:b4:71:bf (ECDSA)
+|_  256 cc:fd:b8:f9:e2:86:f3:57:d3:0f:7b:74:26:b9:61:96 (ED25519)
+Device type: general purpose
+Running: Linux 2.6.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:5 cpe:/o:linux:linux_kernel:6
+OS details: Linux 2.6.32, Linux 5.0 - 6.2
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (3 hosts up) scanned in 27.23 seconds
