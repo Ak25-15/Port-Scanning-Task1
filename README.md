@@ -105,7 +105,7 @@ This repository contains the results and analysis of a detailed Nmap scan conduc
   
     echo "=== Aggressive Scan ==="
     sudo nmap -sS -A 10.0.2.0/24
-  } > task1_complete.txt
+  } > TCP_SYN_scans.txt
 
 ---
 ## 📌 Conclusion
