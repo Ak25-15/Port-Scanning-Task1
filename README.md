@@ -71,41 +71,42 @@ This repository contains the results and analysis of a detailed Nmap scan conduc
 ## 🛠️ Commands Used
 
 ### Nmap Scan Commands
-# Basic TCP SYN Scan
-sudo nmap -sS 10.0.2.15/24
+- **Basic TCP SYN Scan:**
+  - sudo nmap -sS 10.0.2.15/24
 
-# Service Version Detection
-sudo nmap -sS -sV 10.0.2.15/24
+- **Service Version Detection:**
+  - sudo nmap -sS -sV 10.0.2.15/24
 
-# OS Detection
-sudo nmap -sS -O 10.0.2.15/24
+- **OS Detection:**
+  - sudo nmap -sS -O 10.0.2.15/24
 
-# Specific Ports Scan
-sudo nmap -sS -p 22,80,443 10.0.2.15/24
+- **Specific Ports Scan:**
+  - sudo nmap -sS -p 22,80,443 10.0.2.15/24
 
-# Aggressive Scan (OS, version, scripts, traceroute)
-sudo nmap -sS -A 10.0.2.15/24
+- **Aggressive Scan (OS, version, scripts, traceroute)**
+    - sudo nmap -sS -A 10.0.2.15/24
 
-# Packet Capture with Wireshark
+- **Packet Capture with Wireshark**
   - sudo wireshark
 
-# Combined Output to File
-{
-  echo "=== Basic SYN Scan ==="
-  sudo nmap -sS 10.0.2.15/24
+- **Combined Output to File**
+  {
+    echo "=== Basic SYN Scan ==="
+    sudo nmap -sS 10.0.2.15/24
+  
+    echo "=== Service Detection ==="
+    sudo nmap -sS -sV 10.0.2.15/24
+  
+    echo "=== OS Detection ==="
+    sudo nmap -sS -O 10.0.2.15/24
+  
+    echo "=== Specific Ports ==="
+    sudo nmap -sS -p 22,80,443 10.0.2.15/24
+  
+    echo "=== Aggressive Scan ==="
+    sudo nmap -sS -A 10.0.2.0/24
+  } > task1_complete.txt
 
-  echo "=== Service Detection ==="
-  sudo nmap -sS -sV 10.0.2.15/24
-
-  echo "=== OS Detection ==="
-  sudo nmap -sS -O 10.0.2.15/24
-
-  echo "=== Specific Ports ==="
-  sudo nmap -sS -p 22,80,443 10.0.2.15/24
-
-  echo "=== Aggressive Scan ==="
-  sudo nmap -sS -A 10.0.2.0/24
-} > task1_complete.txt
 ---
 ## 📌 Conclusion
 
